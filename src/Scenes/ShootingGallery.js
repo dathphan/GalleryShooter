@@ -264,7 +264,7 @@ class ShootingGallery extends Phaser.Scene {
     }
 
     gameOver(){
-        this.fire.lose();
+        this.lose.play();
         this.scene.start('gameOver', [this.level, this.score]);
     }
 
