@@ -7,3 +7,7 @@
 - You have a limited number of hearts before you lose the game
 - Landing a hit gives you a heart
 - You can get more hearts by getting percise collateral hits
+
+### EC Attempts:
+- Multiple distinct levels
+- High score system
