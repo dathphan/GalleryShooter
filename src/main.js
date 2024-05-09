@@ -21,7 +21,7 @@ let config = {
     },
     width: 800,
     height: 600,
-    scene: [ShootingGallery, GameOver],
+    scene: [Introduction, ShootingGallery, GameOver],
     fps: {forceSetTimeOut: true, target: 60}
 }
 

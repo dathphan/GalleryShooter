@@ -10,7 +10,12 @@ class GameOver extends Phaser.Scene {
         this.menuText = []
     }
 
+    preload() {
+        
+    }
+
     create() {
+
         this.menuText.push(this.add.text(400, 200, 'Game Over', { fontSize: '48px'}).setOrigin(0.5));
         this.menuText.push(this.add.text(400, 300, 'Score: ' + this.score, { fontSize: '24px'}).setOrigin(0.5));
         this.menuText.push(this.add.text(400, 350, 'Level: ' + this.level, { fontSize: '24px'}).setOrigin(0.5));
@@ -29,6 +34,13 @@ class GameOver extends Phaser.Scene {
             element.destroy();
         });
         let highScores = JSON.parse(localStorage.getItem('highScores')) || [];
+        if (highScores.length < 5) {
+            highScores.push(5673950)
+            highScores.push(150000)
+            highScores.push(80000)
+            highScores.push(12000)
+            highScores.push(5000)
+        }
         highScores.push(this.score);
         highScores.sort((a, b) => b - a);
         localStorage.setItem('highScores', JSON.stringify(highScores));
@@ -40,7 +52,7 @@ class GameOver extends Phaser.Scene {
             highScoreText += hs + "\n"
         });
         this.add.text(400, 300, highScoreText, { fontSize: '32px'}).setOrigin(0.5, 0);
-        this.add.text(400, 250, 'Press Space to Continue', { fontSize: '16px'}).setOrigin(0.5)
+        this.add.text(400, 250, 'Press Space to Restart', { fontSize: '16px'}).setOrigin(0.5)
     }
 
     update() {
