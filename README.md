@@ -9,5 +9,8 @@
 - You can get more hearts by getting percise collateral hits
 
 ### EC Attempts:
-- Multiple distinct levels
+- Multiple levels (More enemies and gets faster)
 - High score system
+- Boss Battle (Shrinks when shot)
+- Title Screen
+- Controls and Credits
